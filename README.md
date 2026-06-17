@@ -4,4 +4,6 @@ Vous y trouverez les langages/technologies suivantes :
 - Java
 - PHP
 - JS
+- bash
+- React
 - Postgres (conteneurisée)
