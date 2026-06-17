@@ -12,7 +12,7 @@ wsl --install
 1. Lancer VSCode
 2. se connecter au WSL en utilisant "Remote connexion"
 
-![Connexion à WSL à partir de VSCode](img/vsccode-activate-remote.gif)
+![Connexion à WSL à partir de VSCode](img/vscode-activate-remote.gif)
 
 3. Ouverture d'un dossier de travail
 
@@ -24,4 +24,4 @@ wsl --install
 
 Une fois l'extension installée il est possible de configurer le projet pour utiliser le débugger, comme présenté par le Gif suivant :
 
-![Debugging avec VSCode](img/vsccode-debug.gif)
+![Debugging avec VSCode](img/vscode-debug.gif)
