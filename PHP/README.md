@@ -110,6 +110,7 @@ Il est important de noter que c'est l'IDE qui va écouter les évènements gén�
 Ci-dessous un diagramme de séquence représentant les échanges entre les acteurs :
 
 ```mermaid
+%%{init: { "sequence": { "wrap": true} } }%%
 sequenceDiagram
     participant IDE
     participant Navigateur
@@ -117,16 +118,21 @@ sequenceDiagram
 
     Note right of PHP/Xdebug: php.ini : xdebug.mode=debug
 
-    Navigateur->>+Navigateur: Démarrage de la session de débogage via extension (COOKIE)
+    Note right of Navigateur: Démarrage de la session de débogage via extension (COOKIE)
+    Navigateur->>+Navigateur :
 
-    Navigateur->>+PHP/Xdebug: Activer session de débogage
+
+    Note right of Navigateur: Activer session de débogage
+    Navigateur->>+PHP/Xdebug: 
     
-    PHP/Xdebug-->>-IDE: Démarrage session OK / début échange via protocol DBGp
+    Note right of Navigateur: Démarrage session OK<br/>Début échange via protocol DBGp    
+    PHP/Xdebug-->>-IDE:
 
+    Note right of IDE: Configuration des "breakpoints"
+    IDE->>+PHP/Xdebug: 
 
-    IDE->>+PHP/Xdebug: Configuration des "breakpoints"
-
-    IDE<<->>+PHP/Xdebug: Echanges via protocol DBGp
+    Note right of Navigateur :  Echanges via protocol DBGp
+    IDE<<->>+PHP/Xdebug:
 ```
 
 ## Sous Windows avec installation locale
